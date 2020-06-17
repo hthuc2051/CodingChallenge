@@ -6,9 +6,8 @@ public class Messages {
     public static String MSG_ENTER = "Enter command: ";
     public static String MSG_QUIT = "Quit program !";
     public static String MSG_COMMAND_ERROR = "Input incorrect command format";
-    public static String MSG_CANVAS_NOT_CREATED = "Canvas has not been created";
 
-    // Dimension
+    // Messages exceptions
     public static String MSG_DIMENSION_NULL = "Dimension of canvas can not be null";
     public static String MSG_LINE_NULL = "Line can not be null";
     public static String MSG_RECTANGLE_NULL = "Rectangle can not be null";
@@ -16,13 +15,13 @@ public class Messages {
     public static String MSG_POINT_START_NULL = "Point start should not be null";
     public static String MSG_POINT_END_NULL = "Point end should not be null";
 
-
+    public static String MSG_CANVAS_NOT_CREATED = "Canvas has not been created";
     public static String MSG_INVALID_CANVAS_WIDTH = "Invalid canvas width: ";
     public static String MSG_INVALID_CANVAS_HEIGHT = "Invalid canvas height: ";
     public static String MSG_CANVAS_CREATED = "Canvas has been created !";
 
 
-    public static final String description =
+    public static final String DESCRIPTION =
             "----------- \n"
             + "The program allows these functions:\n"
             + "1. Create a new canvas \n"

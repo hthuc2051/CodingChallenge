@@ -67,7 +67,7 @@ public class CommandProcessor {
     }
 
 
-    private char validateCommand(String inputString) throws InvalidCommandArgumentException {
+    public char validateCommand(String inputString) throws InvalidCommandArgumentException {
         String[] arr = inputString.split(CHARACTER_SPLIT);
         String prefix = arr[0];
 

@@ -1,15 +1,14 @@
 package com.fsoft.codingchallenge.dtos;
 
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
 public class Dimension {
 
     private int width;
     private int height;
+
+    public Dimension() {
+    }
 
     public Dimension(int width, int height) {
         super();
@@ -23,6 +22,22 @@ public class Dimension {
         }
 
         this.width = width;
+        this.height = height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
         this.height = height;
     }
 }
