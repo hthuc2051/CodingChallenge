@@ -73,15 +73,15 @@ Quit the program
 
 ## Build environment
 
--JDK 11.0.6
--Java version 1.8
--Maven (embedded in IntelliJ)
--Dependencies
--JUnit is used for testing
+- JDK 11.0.6
+- Java version 1.8
+- Maven (embedded in IntelliJ)
+- Dependencies
+- JUnit is used for testing
 
 
 ## Note:
--Only 1 canvas can be created.
--Max width and height of canvas are set to 50, can change in AppConstant.
+- Only 1 canvas can be created.
+- Max width and height of canvas are set to 50, can change in AppConstant.
 
 
