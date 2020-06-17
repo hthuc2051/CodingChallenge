@@ -6,6 +6,7 @@ import com.fsoft.codingchallenge.dtos.Dimension;
 import com.fsoft.codingchallenge.utils.ParseNumberUtils;
 
 import static com.fsoft.codingchallenge.constants.AppConstant.CHARACTER_SPLIT;
+import static com.fsoft.codingchallenge.constants.Messages.MSG_CANVAS_CREATED;
 
 
 public class DrawCanvasCommandParser implements CommandParser {
@@ -24,7 +25,11 @@ public class DrawCanvasCommandParser implements CommandParser {
             int height = ParseNumberUtils.valueOf(arr[2]);
 
             Dimension dimension = new Dimension(width, height);
-            canvas = new Canvas(dimension);
+            if (canvas == null) {
+                canvas = new Canvas(dimension);
+            } else {
+                throw new IllegalArgumentException(MSG_CANVAS_CREATED);
+            }
             canvasCommand = new DrawCanvasCommand(canvas);
         }
         return canvasCommand;

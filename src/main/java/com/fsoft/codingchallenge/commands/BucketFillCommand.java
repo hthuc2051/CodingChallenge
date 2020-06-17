@@ -7,17 +7,18 @@ import com.fsoft.codingchallenge.exceptions.InvalidDrawingComponentException;
 
 import static com.fsoft.codingchallenge.constants.Messages.MSG_CANVAS_NOT_CREATED;
 
-public class BucketFillCommand implements DrawingCommand {
+public class BucketFillCommand extends AbstractCommand {
+
     private final BucketFill bucketFill;
-    private final Canvas canvas;
 
     public BucketFillCommand(BucketFill bucketFill, Canvas canvas) {
+        super(canvas);
         this.bucketFill = bucketFill;
-        this.canvas = canvas;
     }
 
+    @Override
     public void execute() throws InvalidDrawingComponentException {
-        if(canvas == null){
+        if (canvas == null) {
             throw new InvalidDrawingComponentException(MSG_CANVAS_NOT_CREATED);
         }
         canvas.addChildComponent(this.bucketFill);

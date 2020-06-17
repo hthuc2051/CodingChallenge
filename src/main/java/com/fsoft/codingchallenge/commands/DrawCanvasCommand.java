@@ -3,12 +3,10 @@ package com.fsoft.codingchallenge.commands;
 
 import com.fsoft.codingchallenge.dtos.drawing.Canvas;
 
-public class DrawCanvasCommand implements DrawingCommand {
-
-    private final Canvas canvas;
+public class DrawCanvasCommand extends AbstractCommand {
 
     public DrawCanvasCommand(Canvas canvas) {
-        this.canvas = canvas;
+        super(canvas);
     }
 
     public void execute() {

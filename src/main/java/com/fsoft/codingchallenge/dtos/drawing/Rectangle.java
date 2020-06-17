@@ -6,8 +6,8 @@ import static com.fsoft.codingchallenge.constants.AppConstant.CHARACTER;
 
 public class Rectangle implements DrawableComponent  {
 
-    private final Point start;
-    private final Point end;
+    private Point start;
+    private Point end;
 
     public Rectangle(Point start, Point end) {
         this.start = start;
@@ -30,5 +30,21 @@ public class Rectangle implements DrawableComponent  {
             canvas.update(i, sx, CHARACTER);
             canvas.update(i, ex, CHARACTER);
         }
+    }
+
+    public Point getStart() {
+        return start;
+    }
+
+    public Point getEnd() {
+        return end;
+    }
+
+    public void setStart(Point start) {
+        this.start = start;
+    }
+
+    public void setEnd(Point end) {
+        this.end = end;
     }
 }

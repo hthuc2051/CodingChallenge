@@ -7,15 +7,15 @@ import com.fsoft.codingchallenge.exceptions.InvalidDrawingComponentException;
 
 import static com.fsoft.codingchallenge.constants.Messages.MSG_CANVAS_NOT_CREATED;
 
-public class DrawRectangleCommand implements DrawingCommand {
+public class DrawRectangleCommand extends AbstractCommand {
     private final Rectangle rectangle;
-    private final Canvas canvas;
 
     public DrawRectangleCommand(Rectangle rectangle, Canvas canvas) {
+        super(canvas);
         this.rectangle = rectangle;
-        this.canvas = canvas;
     }
 
+    @Override
     public void execute() throws InvalidDrawingComponentException {
         if(canvas == null){
             throw new InvalidDrawingComponentException(MSG_CANVAS_NOT_CREATED);

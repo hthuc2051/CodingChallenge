@@ -5,8 +5,8 @@ import com.fsoft.codingchallenge.dtos.Point;
 
 public class BucketFill implements DrawableComponent {
 
-    private final Point point;
-    private final char color;
+    private Point point;
+    private char color;
 
     public BucketFill(Point point, char color) {
         this.point = point;
@@ -55,5 +55,21 @@ public class BucketFill implements DrawableComponent {
         return 1 <= x && 1 <= y
                 && 1 + dimension.getWidth() >= x
                 && 1 + dimension.getHeight() >= y;
+    }
+
+    public Point getPoint() {
+        return point;
+    }
+
+    public char getColor() {
+        return color;
+    }
+
+    public void setPoint(Point point) {
+        this.point = point;
+    }
+
+    public void setColor(char color) {
+        this.color = color;
     }
 }

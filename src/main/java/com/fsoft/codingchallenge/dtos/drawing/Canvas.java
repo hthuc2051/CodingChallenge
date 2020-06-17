@@ -10,7 +10,7 @@ import java.util.List;
 import static com.fsoft.codingchallenge.constants.AppConstant.*;
 import static com.fsoft.codingchallenge.constants.Messages.*;
 
-@Data
+
 public class Canvas {
     private Dimension dimension;
     private Dimension outerDimension;
@@ -81,4 +81,31 @@ public class Canvas {
         }
     }
 
+    public Dimension getDimension() {
+        return dimension;
+    }
+
+    public void setDimension(Dimension dimension) {
+        this.dimension = dimension;
+    }
+
+    public Dimension getOuterDimension() {
+        return outerDimension;
+    }
+
+    public void setOuterDimension(Dimension outerDimension) {
+        this.outerDimension = outerDimension;
+    }
+
+    public char[][] getCells() {
+        return cells;
+    }
+
+    public List<DrawableComponent> getComponents() {
+        return components;
+    }
+
+    public void setComponents(List<DrawableComponent> components) {
+        this.components = components;
+    }
 }

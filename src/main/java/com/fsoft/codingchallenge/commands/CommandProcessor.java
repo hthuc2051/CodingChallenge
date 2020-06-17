@@ -20,12 +20,13 @@ public class CommandProcessor {
     public void start() {
 
         char prefix;
+
         do {
             System.out.print(MSG_ENTER);
             Scanner sc = new Scanner(System.in);
             String inputCommand = sc.nextLine();
             try {
-                prefix = parseStr(inputCommand);
+                prefix = validateCommand(inputCommand);
                 switch (prefix) {
                     case PREFIX_CANVAS:
                         DrawCanvasCommandParser canvasCommandParser = new DrawCanvasCommandParser();
@@ -66,7 +67,7 @@ public class CommandProcessor {
     }
 
 
-    private char parseStr(String inputString) throws InvalidCommandArgumentException {
+    private char validateCommand(String inputString) throws InvalidCommandArgumentException {
         String[] arr = inputString.split(CHARACTER_SPLIT);
         String prefix = arr[0];
 
