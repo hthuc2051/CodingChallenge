@@ -10,6 +10,13 @@ public class Messages {
 
     // Dimension
     public static String MSG_DIMENSION_NULL = "Dimension of canvas can not be null";
+    public static String MSG_LINE_NULL = "Line can not be null";
+    public static String MSG_RECTANGLE_NULL = "Rectangle can not be null";
+    public static String MSG_BUCKET_FILL_NULL = "Bucket fill can not be null";
+    public static String MSG_POINT_START_NULL = "Point start should not be null";
+    public static String MSG_POINT_END_NULL = "Point end should not be null";
+
+
     public static String MSG_INVALID_CANVAS_WIDTH = "Invalid canvas width: ";
     public static String MSG_INVALID_CANVAS_HEIGHT = "Invalid canvas height: ";
     public static String MSG_CANVAS_CREATED = "Canvas has been created !";

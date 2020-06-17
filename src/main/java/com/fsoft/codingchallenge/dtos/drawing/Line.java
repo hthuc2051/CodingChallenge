@@ -1,6 +1,8 @@
 package com.fsoft.codingchallenge.dtos.drawing;
 
 import static com.fsoft.codingchallenge.constants.AppConstant.*;
+import static com.fsoft.codingchallenge.constants.Messages.MSG_POINT_END_NULL;
+import static com.fsoft.codingchallenge.constants.Messages.MSG_POINT_START_NULL;
 
 import com.fsoft.codingchallenge.dtos.Point;
 
@@ -10,6 +12,14 @@ public class Line implements DrawableComponent {
     private Point end;
 
     public Line(Point start, Point end) {
+        if (start == null) {
+            throw new IllegalArgumentException(MSG_POINT_START_NULL);
+        }
+
+        if (end == null) {
+            throw new IllegalArgumentException(MSG_POINT_END_NULL);
+        }
+
         this.start = start;
         this.end = end;
     }
