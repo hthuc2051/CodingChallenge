@@ -25,7 +25,7 @@ The program allows these functions:
 ## Sample I/O
 
 Below is a sample run of the program. User input is prefixed with enter command:
-
+```
 enter command: C 20 4
 ----------------------
 |                    |
@@ -69,7 +69,7 @@ enter command: B 10 3 o
 enter command: Q
 
 Quit the program
-
+```
 
 ## Build environment
 
