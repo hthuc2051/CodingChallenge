@@ -20,6 +20,9 @@ public class Messages {
     public static String MSG_INVALID_CANVAS_HEIGHT = "Invalid canvas height: ";
     public static String MSG_CANVAS_CREATED = "Canvas has been created !";
 
+    public static String MSG_ARGUMENT_MAX_LENGTH = "The length of command must equal: ";
+
+
 
     public static final String DESCRIPTION =
             "----------- \n"
